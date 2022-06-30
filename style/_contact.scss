@@ -1,0 +1,114 @@
+.contact-container{
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    & .contact-image{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        & img{
+            width: 50%;
+        }
+
+    }
+
+    & .contacts-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        & div{
+            
+                & p{
+                    display: grid;
+                    grid-template-rows: 1fr;
+                    grid-template-columns: 1fr 4fr;
+                }
+                & span{
+                    font-weight: bold;
+                }
+            
+          
+        }
+    }
+}
+
+section{
+    height:fit-content
+}
+    
+@media screen and (max-width:980px) {
+    .contact-container{
+        margin-top: 10%;
+        padding: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr 3fr;
+        place-items: center;
+        height: 100vh;
+    
+        & .contact-image{
+            width: 60%;
+    
+            & img{
+                width: 70%;
+            }
+    
+        }
+    
+        & .contacts-items{
+            display: grid;
+            grid-template-columns: 1fr;
+            & div{
+                    width: 90%;
+                    & p{
+                        display: grid;
+                        grid-template-rows: 1fr;
+                        grid-template-columns: 120px 1fr;
+                        gap: 5px;
+                        width: 100%;
+                    }
+                    & span{
+                        font-weight: bold;
+                    }
+                
+            }
+        }
+    }
+}   
+
+
+    
+@media screen and (max-width:380px) {
+    .contact-container{
+        margin-top: 80%;
+        & .contact-image{
+            width: 60%;
+    
+            & img{
+                width: 70%;
+                margin-right: 20%;
+            }
+    
+        }
+    
+        & .contacts-items{
+            display: grid;
+            grid-template-columns: 1fr;
+            & div{
+                
+                    & p{
+                        display: grid;
+                        grid-template-rows: 1fr;
+                        grid-template-columns: 70px 1fr;
+                        gap: 10px;
+                    }
+                    & span{
+                        font-weight: bold;
+                    }
+                
+            }
+        }
+    }
+}   

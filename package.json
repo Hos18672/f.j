@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.53.0"
+  },
+  "name": "f.j.v1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run-sass": "sass --watch style/index.scss index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
