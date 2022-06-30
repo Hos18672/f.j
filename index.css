@@ -219,6 +219,10 @@ p {
   width: 100%;
 }
 
+.hamburger-container {
+  display: none;
+}
+
 .hamburger-menu li {
   margin-bottom: 50px;
 }
