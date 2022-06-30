@@ -16,7 +16,10 @@ body, html{
       monospace;
       
   }
-
+a{
+  text-decoration: none;
+  color: black;
+}
   ::-webkit-scrollbar {
     display: none;
 }

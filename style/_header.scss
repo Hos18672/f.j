@@ -77,8 +77,27 @@
 
 }
 
-
-
+.open-bars{
+    transition:all .5s;
+    margin-left: 10px;
+    & .bar1{
+        transform: rotate(45deg);
+        position: relative;
+         bottom: -7px;
+         width: 30px;
+         transition:all .5s;
+    }
+    & .bar2{
+        display: none;
+        transition:all .5s;
+    }
+    & .bar3{
+        transform: rotate(-45deg);
+        bottom: 8px;
+        width: 30px;
+        transition:all .5s;
+    }
+}
 
 .hamburger-icon{
    
@@ -94,16 +113,7 @@
     }
 }
 
-.hamburger-container{
-        position: absolute;
-        right:30px;
-        border: 3px solid #626056;
-        border-radius: 50px;
-        display: none;
-        width:fit-content;
-        padding: 5px;
 
-}
 .hamburger-menu{
     display: none;
 }
@@ -164,7 +174,7 @@ ul{
     }
 
     
-.open{
+    .open{
 
     &  .navBackground{
         display: flex;
@@ -204,7 +214,8 @@ ul{
         border: 3px solid #626056;
         border-radius: 50px;
         display: flex;
-        width:fit-content;
+        width:120px;
+        height: 25px;
         padding: 5px;
 
     }

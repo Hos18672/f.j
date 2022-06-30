@@ -2,8 +2,10 @@
 // Hamburger Icon onClick
 
 let hm = document.querySelector(".hamburger-icon")
+let bars = document.querySelector(".bars")
 hm.addEventListener("click", () => {
   hm.classList.toggle("open")
+  bars.classList.toggle("open-bars")
   console.log("clicked")
 });
 
