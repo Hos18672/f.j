@@ -107,8 +107,8 @@ p {
     grid-template-rows: 1fr 5% 1fr;
     min-height: fit-content;
   }
-  .profile-image {
-    width: 350px;
+  .image-container img {
+    width: 60vw;
   }
   .line {
     width: 90%;
@@ -131,8 +131,8 @@ p {
     grid-template-rows: 1fr 5% 2fr;
     margin-top: 40px;
   }
-  .profile-image {
-    width: 200px;
+  .image-container img {
+    width: 60vw;
   }
   .line {
     width: 90%;
@@ -209,7 +209,7 @@ p {
 
 .hamburger-container {
   position: absolute;
-  right: 60px;
+  right: 30px;
   border: 3px solid #626056;
   border-radius: 50px;
   display: none;
@@ -457,6 +457,7 @@ ul a {
   .skills .skills-container h1 {
     font-size: 34px;
     margin: 0;
+    margin-bottom: 20px;
     padding: 0;
   }
   .skills .skills-container .line {
