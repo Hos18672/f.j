@@ -1,5 +1,5 @@
 .header-container{
-    height:40%;
+    height:80%;
     display: flex;
     justify-content: space-between;
 }
@@ -14,7 +14,8 @@
 
 .nav-list2,.hamburger-menu {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+
+    grid-template-columns: repeat(4, auto);
     & li {
 
         font-size: 25px;
