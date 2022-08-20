@@ -2,6 +2,12 @@
     height:80%;
     display: flex;
     justify-content: space-between;
+    border-bottom:none;
+}
+
+
+.inverted{
+    background-color: red;
 }
 
 .nav-list{
@@ -9,13 +15,15 @@
     flex-direction: row;
     justify-content: space-between;
 
+
 }
 
 
 .nav-list2,.hamburger-menu {
     display: grid;
-
+    border-bottom:none;
     grid-template-columns: repeat(4, auto);
+
     & li {
 
         font-size: 25px;
@@ -28,6 +36,8 @@
         & a{
             &:hover {
                 opacity: 1;
+                color: rgb(119, 80, 0);
+                      
               } 
               &::before {
                 transition: 400ms;

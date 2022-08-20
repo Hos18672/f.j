@@ -46,6 +46,7 @@
     box-shadow: 10px 10px 3px 2px #DBD8C6;
 }
 .line{
+    margin: 0 10%;
     width: 4px;
     height:90%;
     background: #BAB6A0;}
@@ -70,11 +71,12 @@ p{
         align-items: center;
     }
     .profile-image {
-        width: 400px;
+        width: 300px;
     }
     .line{
         width: 3px;
         height:90%;
+
       }
     h1{
         font-size: 30px;
@@ -88,14 +90,14 @@ p{
 @media screen and (max-width: 768px) {
         
     .about-container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5% 1fr;
-        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
     }
 
     .image-container {
         & img{
-            width: 60vw;
+            width: 50vw;
         }
     }
     .line{
@@ -119,13 +121,10 @@ p{
 }
 
 @media screen and (max-width:560px) {
-    .about-container{
-        grid-template-rows: 1fr 5% 2fr;
-        margin-top: 40px;
-    }
+
     .image-container {
         & img{
-            width: 60vw;
+            width: 45vw;
         }
     }
     .line{

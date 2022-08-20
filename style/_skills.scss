@@ -1,31 +1,27 @@
 .skills{
     & .skills-container{
         display: grid; 
-        grid-template-rows: 1fr;
-        grid-template-columns: 1fr 10px 2fr;
+        grid-template-rows: 1fr ;
         place-items: center;
         background-color: #FFFCF6;
         padding: 1rem;
         transition: all 0.5s; 
         min-height: fit-content;
-        height: 70vh;
+        height: fit-content;
         scroll-behavior: smooth;
         & h1{
-            font-size: 80px;
-        }
-        & .line{
-            width: 5px;
-            height: 65%;
+            font-size: 40px;
         }
         & .skills-items-container{
             display: grid; 
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr  1fr;
             place-items: center;
-            gap: 40px;
+            gap: 30px;
             padding: 5%;
             & h1{
                 font-size: 25px;
+                max-width: 400px;
                 text-align: center;
                 margin-right: 40px;
 
@@ -57,24 +53,16 @@
 @media screen and (max-width:880px) {
 
      .skills-container{
-        height: 100vh;
-        & h1{
-            font-size: 54px;
-        }
-        & .line{
-            height: 90%;
-            width: 5px;
-        }
+        height: fit-content;
+
         & .skills-items-container{
-            grid-template-rows: .5fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr;
- 
+            display: flex;
+            flex-direction: column;
             & h2{
                 font-size: 25px;
                 margin-right: 40px;
 
             }
-
 
             & .item-one,  .item-two,  .item-three{
                & h2{
@@ -94,16 +82,12 @@
 
 }   
 
-
    
 @media screen and (max-width:580px) {
 
-
   &  .skills-container{
-    grid-template-rows: 1fr 10px 1fr;
-    grid-template-columns: 1fr;
        & h1{
-           font-size: 34px;
+           font-size: 30px;
            margin: 0;
            margin-bottom: 20px;
            padding: 0;

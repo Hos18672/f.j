@@ -17,8 +17,29 @@ a {
   color: black;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  height: 80%;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: 0 0 2px grey;
+  height: 90%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(172, 161, 131);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a17030;
 }
 
 .About {
@@ -67,6 +88,7 @@ a {
 }
 
 .line {
+  margin: 0 10%;
   width: 4px;
   height: 90%;
   background: #BAB6A0;
@@ -93,7 +115,7 @@ p {
     align-items: center;
   }
   .profile-image {
-    width: 400px;
+    width: 300px;
   }
   .line {
     width: 3px;
@@ -108,12 +130,12 @@ p {
 }
 @media screen and (max-width: 768px) {
   .about-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 5% 1fr;
-    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
   }
   .image-container img {
-    width: 60vw;
+    width: 50vw;
   }
   .line {
     width: 90%;
@@ -132,12 +154,8 @@ p {
   }
 }
 @media screen and (max-width: 560px) {
-  .about-container {
-    grid-template-rows: 1fr 5% 2fr;
-    margin-top: 40px;
-  }
   .image-container img {
-    width: 60vw;
+    width: 45vw;
   }
   .line {
     width: 90%;
@@ -182,6 +200,11 @@ p {
   height: 80%;
   display: flex;
   justify-content: space-between;
+  border-bottom: none;
+}
+
+.inverted {
+  background-color: red;
 }
 
 .nav-list {
@@ -192,6 +215,7 @@ p {
 
 .nav-list2, .hamburger-menu {
   display: grid;
+  border-bottom: none;
   grid-template-columns: repeat(4, auto);
 }
 .nav-list2 li, .hamburger-menu li {
@@ -205,6 +229,7 @@ p {
 }
 .nav-list2 li a:hover, .hamburger-menu li a:hover {
   opacity: 1;
+  color: rgb(119, 80, 0);
 }
 .nav-list2 li a::before, .hamburger-menu li a::before {
   transition: 400ms;
@@ -429,6 +454,13 @@ ul a {
   font-size: 30px;
   margin-bottom: 5px;
 }
+.item a {
+  transition: all 0.2s;
+}
+.item a:hover {
+  color: rgb(119, 80, 0);
+  font-weight: 500;
+}
 
 @media screen and (max-width: 468px) {
   .main .main-items .item {
@@ -438,32 +470,28 @@ ul a {
 .skills .skills-container {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 10px 2fr;
   place-items: center;
   background-color: #FFFCF6;
   padding: 1rem;
   transition: all 0.5s;
   min-height: fit-content;
-  height: 70vh;
+  height: fit-content;
   scroll-behavior: smooth;
 }
 .skills .skills-container h1 {
-  font-size: 80px;
-}
-.skills .skills-container .line {
-  width: 5px;
-  height: 65%;
+  font-size: 40px;
 }
 .skills .skills-container .skills-items-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  gap: 40px;
+  gap: 30px;
   padding: 5%;
 }
 .skills .skills-container .skills-items-container h1 {
   font-size: 25px;
+  max-width: 400px;
   text-align: center;
   margin-right: 40px;
 }
@@ -483,18 +511,11 @@ ul a {
 }
 @media screen and (max-width: 880px) {
   .skills .skills-container {
-    height: 100vh;
-  }
-  .skills .skills-container h1 {
-    font-size: 54px;
-  }
-  .skills .skills-container .line {
-    height: 90%;
-    width: 5px;
+    height: fit-content;
   }
   .skills .skills-container .skills-items-container {
-    grid-template-rows: 0.5fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
   .skills .skills-container .skills-items-container h2 {
     font-size: 25px;
@@ -509,12 +530,8 @@ ul a {
   }
 }
 @media screen and (max-width: 580px) {
-  .skills .skills-container {
-    grid-template-rows: 1fr 10px 1fr;
-    grid-template-columns: 1fr;
-  }
   .skills .skills-container h1 {
-    font-size: 34px;
+    font-size: 30px;
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
@@ -545,8 +562,16 @@ ul a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  height: 90vh;
-  margin-bottom: 20%;
+  height: fit-content;
+  margin-bottom: 10%;
+  gap: 10px;
+}
+.contact-container h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 100%;
+  border-bottom: 3px solid #000000;
+  font-size: 40px;
 }
 .contact-container .form {
   width: 340px;
@@ -556,13 +581,15 @@ ul a {
   padding: 20px 30px;
   max-width: calc(60vw - 40px);
   box-sizing: border-box;
+  margin: 0;
   font-family: "Montserrat", sans-serif;
 }
 .contact-container .form h2 {
   margin: 10px 0;
   padding-bottom: 10px;
-  width: 180px;
+  width: 100%;
   border-bottom: 3px solid #000000;
+  font-size: 20px;
 }
 .contact-container .form input {
   width: 100%;
@@ -616,6 +643,23 @@ ul a {
 .contact-container .form span {
   margin: 0 5px 0 15px;
 }
+.contact-container .contacts-items {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.contact-container .contacts-items h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+.contact-container .contacts-items table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact-container .contacts-items table tr td {
+  margin: 0 10px;
+  padding: 10px;
+  font-size: 20px;
+}
 
 section {
   height: fit-content;
@@ -641,21 +685,21 @@ section {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .contact-container .contacts-items div {
-    width: 90%;
+  .contact-container .contacts-items h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
   }
-  .contact-container .contacts-items div p {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 120px 1fr;
-    gap: 5px;
+  .contact-container .contacts-items table {
     width: 100%;
+    margin-bottom: 20px;
   }
-  .contact-container .contacts-items div span {
-    font-weight: bold;
+  .contact-container .contacts-items table tr td {
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 15px;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   .contact-container {
     margin-top: 80%;
   }
@@ -672,26 +716,82 @@ section {
   .contact-container .contacts-items div span {
     font-weight: bold;
   }
+  .contact-container .form {
+    width: 340px;
+    height: 440px;
+  }
+  .contact-container .form h2 {
+    padding-bottom: 5px;
+    font-size: 15px;
+  }
+  .contact-container .form input {
+    width: 100%;
+    padding: 10px;
+  }
+  .contact-container .form button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #313131;
+    background: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .contact-container .form button:hover {
+    background: #555555;
+    color: #fff;
+  }
+  .contact-container .form div {
+    content: "Hi";
+    position: absolute;
+    bottom: -15px;
+    right: -20px;
+    background: #50505a;
+    color: #fff;
+    width: 320px;
+    padding: 16px 4px 16px 0;
+    border-radius: 6px;
+    font-size: 13px;
+    box-shadow: 10px 10px 40px -14px #000;
+  }
+  .contact-container .form span {
+    margin: 0 5px 0 15px;
+  }
 }
 .weiterbildung {
   width: 100%;
   height: 100vh;
-  padding: 20px;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0 0 0 0;
+  margin: 0;
+  height: fit-content;
+  width: 90%;
+}
+.weiterbildung h1 {
+  font-size: 40px;
+}
+.weiterbildung .weiterbildung-container {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .weiterbildung .weiterbildung-container li {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 .weiterbildung .weiterbildung-container li div {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
-  width: 150px;
+  min-height: 70px;
+  width: 25%;
   background-color: #f0efea;
   box-shadow: 10px 10px 3px 2px #dad9d9;
   padding: 15px;
@@ -699,13 +799,37 @@ section {
   font-size: 20px;
 }
 .weiterbildung .weiterbildung-container li p {
-  height: 70px;
-  width: 400px;
+  min-height: 70px;
+  width: 80%;
   background-color: #DBD8C6;
   box-shadow: 10px 10px 3px 2px #dad9d9;
   padding: 15px;
   margin: 20px;
   font-size: 20px;
+}
+
+@media screen and (max-width: 580px) {
+  .weiterbildung {
+    height: fit-content;
+  }
+  .weiterbildung h1 {
+    font-size: 30px;
+  }
+  .weiterbildung .weiterbildung-container li {
+    display: flex;
+  }
+  .weiterbildung .weiterbildung-container li div {
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+    min-width: 30%;
+  }
+  .weiterbildung .weiterbildung-container li p {
+    font-size: 15px;
+    padding: 5px;
+    margin: 10px;
+    min-width: 60%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

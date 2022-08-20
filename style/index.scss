@@ -20,10 +20,33 @@ a{
   text-decoration: none;
   color: black;
 }
-  ::-webkit-scrollbar {
-    display: none;
+
+*{
+  scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 80%;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow:  0 0 2px grey; 
+  height: 90%;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(172, 161, 131); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a17030; 
+
+}
 
 @import 'about';
 @import 'header';
