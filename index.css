@@ -461,12 +461,25 @@ ul a {
   color: rgb(119, 80, 0);
   font-weight: 500;
 }
-
-@media screen and (max-width: 468px) {
-  .main .main-items .item {
-    font-size: 20px;
+@media screen and (max-width: 768px) {
+  .item {
+    font-size: 25px;
+    max-width: 500px;
   }
 }
+@media screen and (max-width: 568px) {
+  .item {
+    font-size: 22px;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 368px) {
+  .item {
+    font-size: 18px;
+    max-width: 180px;
+  }
+}
+
 .skills .skills-container {
   display: grid;
   grid-template-rows: 1fr;

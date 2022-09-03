@@ -27,21 +27,23 @@
                 
             }
     }
+    @media screen and (max-width: 768px){
+        font-size: 25px;
+        max-width: 500px;
+
+       }
+    @media screen and (max-width: 568px){
+        font-size: 22px;
+        max-width: 300px;
+
+       }
+       @media screen and (max-width: 368px){
+        font-size: 18px;
+        max-width: 180px;
+
+       }
+       
 }
 
 
-@media screen and (max-width: 468px){
-  
- .main{
-    &  .main-items{
 
-        & .item{
-            font-size: 20px;
-        }
-
-         
-     }
- }
-
-
-}
