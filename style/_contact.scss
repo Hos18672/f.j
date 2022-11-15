@@ -95,8 +95,8 @@
                 margin-bottom: 20px;
                 & tr{
                     & td{
-                        margin: 0 10px;
-                        padding: 10px;
+                        margin: 0 5px;
+                        padding: 5px;
                         font-size: 20px;
                     }
             
@@ -159,6 +159,57 @@ section{
 
     
 @media screen and (max-width:450px) {
+   
+    .section-items-conteiner{
+        width: 100%;
+    }
+    .contact-container{
+        margin-top: 80%;  
+        margin-bottom: 45%;  
+        & .contacts-items{
+            display: grid;
+            grid-template-columns: 1fr;
+
+            & h1{
+                font-size: 25px;
+            }
+            & table{
+                width: 90%;
+                margin-bottom: 20px;
+                & tr{
+                    & td{
+                        margin: 0 5px;
+                        padding: 5px;
+                        font-size: 11px;
+                    }
+            
+                }
+        }
+
+        }
+        & .form {
+            width: 90%;
+            min-width: 90%;
+            position: relative;
+            right: 8px;
+        
+
+            &  input,textarea {
+                width: 90%;
+            }
+    
+        }
+       
+        
+    }
+}   
+
+
+@media screen and (min-width:350) {
+
+    .section-items-conteiner{
+        width: 100%;
+    }
     .contact-container{
         margin-top: 80%;    
         & .contacts-items{
@@ -168,9 +219,18 @@ section{
             & h1{
                 font-size: 25px;
             }
-            & table tbody tr td{
-                font-size: 14px;
-            }
+            & table{
+                width: 90%;
+                margin-bottom: 20px;
+                & tr{
+                    & td{
+                        margin: 0 5px;
+                        padding: 5px;
+                        font-size: 11px;
+                    }
+            
+                }
+        }
 
         }
         & .form {

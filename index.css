@@ -661,8 +661,8 @@ ul a {
   margin-bottom: 20px;
 }
 .contact-container .contacts-items table tr td {
-  margin: 0 10px;
-  padding: 10px;
+  margin: 0 5px;
+  padding: 5px;
   font-size: 20px;
 }
 
@@ -708,6 +708,43 @@ section {
   }
 }
 @media screen and (max-width: 450px) {
+  .section-items-conteiner {
+    width: 100%;
+  }
+  .contact-container {
+    margin-top: 80%;
+    margin-bottom: 45%;
+  }
+  .contact-container .contacts-items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .contact-container .contacts-items h1 {
+    font-size: 25px;
+  }
+  .contact-container .contacts-items table {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .contact-container .contacts-items table tr td {
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 11px;
+  }
+  .contact-container .form {
+    width: 90%;
+    min-width: 90%;
+    position: relative;
+    right: 8px;
+  }
+  .contact-container .form input, .contact-container .form textarea {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 350) {
+  .section-items-conteiner {
+    width: 100%;
+  }
   .contact-container {
     margin-top: 80%;
   }
@@ -718,8 +755,14 @@ section {
   .contact-container .contacts-items h1 {
     font-size: 25px;
   }
-  .contact-container .contacts-items table tbody tr td {
-    font-size: 14px;
+  .contact-container .contacts-items table {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .contact-container .contacts-items table tr td {
+    margin: 0 5px;
+    padding: 5px;
+    font-size: 11px;
   }
   .contact-container .form {
     width: 90%;
