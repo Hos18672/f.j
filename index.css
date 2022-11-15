@@ -687,7 +687,7 @@ section {
     width: 70%;
   }
   .contact-container .form {
-    min-width: 90%;
+    min-width: 70%;
   }
   .contact-container .contacts-items {
     display: grid;
@@ -719,58 +719,16 @@ section {
     font-size: 25px;
   }
   .contact-container .contacts-items table tbody tr td {
-    font-size: 13px;
-  }
-  .contact-container .contacts-items div p {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 70px 1fr;
-    gap: 5px;
-  }
-  .contact-container .contacts-items div span {
-    font-weight: bold;
+    font-size: 14px;
   }
   .contact-container .form {
     width: 90%;
-    height: 440px;
+    min-width: 90%;
+    position: relative;
+    right: 10px;
   }
-  .contact-container .form h2 {
-    padding-bottom: 5px;
-    font-size: 15px;
-  }
-  .contact-container .form input {
-    width: 95%;
-    padding: 10px;
-  }
-  .contact-container .form button {
-    float: right;
-    padding: 8px 12px;
-    margin: 8px 0 0;
-    font-family: "Montserrat", sans-serif;
-    border: 2px solid #313131;
-    background: 0;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .contact-container .form button:hover {
-    background: #555555;
-    color: #fff;
-  }
-  .contact-container .form div {
-    content: "Hi";
-    position: absolute;
-    bottom: -15px;
-    right: -20px;
-    background: #50505a;
-    color: #fff;
-    width: 100%;
-    padding: 16px 4px 16px 0;
-    border-radius: 6px;
-    font-size: 13px;
-    box-shadow: 10px 10px 40px -14px #000;
-  }
-  .contact-container .form span {
-    margin: 0 5px 0 15px;
+  .contact-container .form input, .contact-container .form textarea {
+    width: 90%;
   }
 }
 .weiterbildung {
