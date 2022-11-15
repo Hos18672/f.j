@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom:none;
+    z-index: 111;
 }
 
 
@@ -23,8 +24,10 @@
     display: grid;
     border-bottom:none;
     grid-template-columns: repeat(4, auto);
+    z-index: 111;
 
     & li {
+        z-index: 111;
         font-size: 20px;
         text-transform: uppercase;
         text-decoration: none;
@@ -190,13 +193,15 @@ ul{
     .open{
 
     &  .navBackground{
+        position: absolute;
+        right: 15px;
+        padding: 10px;
+        height: 110%;
         display: flex;
         justify-content:center;
         position: absolute;
         background-color: #DBD8C6;
         animation: navSlide 1.5s linear; 
-        width: 50%;
-        height: 98%;
         top:0;
         transition: transform 1.5s;
         box-shadow: -0px 0px 0px 0px #00000046;    }
@@ -212,16 +217,6 @@ ul{
     }
     .nav-item{
         margin: 20px;
-    }
-    .navBackground{
-        display: block;
-        background-color: #DBD8C6;
-        position: absolute;
-        top: 7%;
-        right: 15px;
-        padding: 10px;
-        height: 91%;
-
     }
     .hamburger-container{
         border: 3px solid #626056;
