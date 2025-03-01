@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Impressum | Fatemeh Jafari</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      background-color: rgb(246, 235, 206);
+    }
+    .mainContainer{
+      display: grid; 
+      grid-template-rows: 80px 1fr;
+      background-color: #FFFCF6;
+      padding: 1rem;
+      margin: 10px 20px;
+      transition: all 0.5s; 
+      box-shadow: 3px 3px 3px 2px #D1D1D1;
+      min-height: fit-content;
+      height: 95vh;
+      overflow: hidden;
+    }
+    body { 
+      margin: 0;
+      font-family: Arial, sans-serif; 
+      line-height: 1.6;
+    }
+    header, footer { 
+      background: #f4f4f4; 
+      padding: 10px; 
+    }
+    h1, h2 { 
+      color: #333; 
+      margin-top: 0;
+    }
+    a { 
+      color: #007acc; 
+    }
+    main { 
+      overflow-y: auto;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="mainContainer">
+    <header>
+      <h1>Impressum</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          <span>Fatemeh Jafari</span><br>
+          <span data-content="contact_title">Allgemeine beeidete und gerichtlich zertifizierte Dolmetscherin</span><br>
+          <span data-content="contact_location"> St Stefaner Straße 25 9400 Wolfsberg</span><br>
+          Übersetzungsbüro:<span data-content="contact_office">Wurlitzergasse 72,1160 Wien</span><br>
+          Telefon: <span data-content="contact_phone">0664 1365755</span><br>
+          E-Mail: <span data-content="contact_email">fatemejafari5799@gmail.com</span><br>
+          Webseite: <span data-content="contact_web">www.fatemehjafari.at</span>
+        </p>
+      </section>
+      <section>
+        <h2>Inhaltlich Verantwortlicher</h2>
+        <p>
+          Fatemeh Jafari<br>
+          <span data-content="inhaltlich_verantwortlicher">für den Inhalt nach § 55 Abs. 2 RStV.</span> 
+        </p>
+      </section>
+      <section>
+        <h2>Haftungsausschluss</h2>
+        <p data-content="haftungsausschluss">
+          Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+      </section>
+      <section>
+        <h2>Urheberrecht</h2>
+        <p data-content="urheberrecht">
+          Die durch die Seiten erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Jede Art der Verwertung bedarf der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Fatemeh Jafari. Alle Rechte vorbehalten.</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Change your script tag in HTML to -->
+<script type="module" src="base.js"></script>
+</body>
+</html>

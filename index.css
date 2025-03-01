@@ -17,6 +17,15 @@ a {
   color: black;
 }
 
+.footer_item {
+  width: 250px;
+  font-size: 20px;
+}
+
+.footer_link:hover {
+  font-weight: bold;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -42,7 +51,7 @@ a {
   background: #a17030;
 }
 
-.About {
+.mainContainer {
   display: grid;
   grid-template-rows: 80px 1fr;
   background-color: #FFFCF6;
@@ -51,6 +60,7 @@ a {
   box-shadow: 3px 3px 3px 2px #D1D1D1;
   min-height: fit-content;
   height: 85vh;
+  flex-grow: 1;
   overflow: hidden;
 }
 
@@ -214,13 +224,41 @@ p {
   justify-content: space-between;
 }
 
-.nav-list2, .hamburger-menu {
+/* Language Switcher Styles */
+.language-switcher {
+  position: relative;
+  width: 90%;
+  min-width: 100px;
+  flex-grow: 1;
+  margin: 0 auto !important;
+  z-index: 1000;
+  max-height: 40px;
+  margin-top: 1%;
+  padding: 10px 15px;
+  border: 1px solid #626056;
+  border-radius: 50px;
+  background-color: #DBD8C6;
+  color: #626056;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher:hover {
+  background-color: #c5c2b0;
+}
+
+.nav-list2,
+.hamburger-menu {
+  text-align: center;
   display: grid;
   border-bottom: none;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   z-index: 111;
+  padding-left: 0 !important;
 }
-.nav-list2 li, .hamburger-menu li {
+.nav-list2 li,
+.hamburger-menu li {
   z-index: 111;
   font-size: 20px;
   text-transform: uppercase;
@@ -230,11 +268,13 @@ p {
   position: relative;
   opacity: 0.75;
 }
-.nav-list2 li a:hover, .hamburger-menu li a:hover {
+.nav-list2 li a:hover,
+.hamburger-menu li a:hover {
   opacity: 1;
   color: rgb(119, 80, 0);
 }
-.nav-list2 li a::before, .hamburger-menu li a::before {
+.nav-list2 li a::before,
+.hamburger-menu li a::before {
   transition: 400ms;
   height: 5px;
   content: "";
@@ -243,7 +283,8 @@ p {
   width: 0%;
   bottom: -10px;
 }
-.nav-list2 li a:hover::before, .hamburger-menu li a:hover::before {
+.nav-list2 li a:hover::before,
+.hamburger-menu li a:hover::before {
   width: 100%;
 }
 
@@ -272,7 +313,8 @@ p {
 
 .open-bars {
   transition: all 0.5s;
-  margin-left: 10px;
+  margin-left: 5px;
+  margin-bottom: 7px;
 }
 .open-bars .bar1 {
   transform: rotate(45deg);
@@ -295,10 +337,10 @@ p {
 .hamburger-icon .navBackground {
   display: none;
   background-color: #DBD8C6;
-  position: absolute;
+  position: relative;
   animation: navSlide 1.5s linear;
   padding: 10px;
-  height: 100%;
+  padding-left: 10%;
   width: 50%;
   transition: transform 1.5s;
 }
@@ -314,7 +356,9 @@ p {
   color: #626056;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 40px;
   height: 3px;
   margin: 4px;
@@ -346,12 +390,27 @@ ul a {
   text-decoration: none;
 }
 
+.active {
+  position: relative;
+  opacity: 1;
+  color: rgb(119, 80, 0) !important;
+}
+.active::after {
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+}
+
 .logo {
   margin-left: 30px;
   font-size: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 930px) {
   .menu-list {
     display: none;
     justify-content: space-between;
@@ -359,12 +418,19 @@ ul a {
   .hamburger-container {
     z-index: 11;
   }
+  .header-container .language-switcher {
+    display: none;
+  }
+  .hamburger-icon .language-switcher {
+    display: block;
+  }
   .open .navBackground {
     position: absolute;
     right: 15px;
     padding: 10px;
     height: 110%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     position: absolute;
     background-color: #DBD8C6;
@@ -379,8 +445,6 @@ ul a {
     align-items: center;
     flex-direction: column;
     position: relative;
-    margin-top: 50px;
-    margin-right: 50px;
   }
   .nav-item {
     margin: 20px;
@@ -389,9 +453,11 @@ ul a {
     border: 3px solid #626056;
     border-radius: 50px;
     display: flex;
-    width: 120px;
+    width: 50px;
     height: 25px;
     padding: 5px;
+    align-items: center;
+    text-align: center;
   }
 }
 @media screen and (max-width: 468px) {
@@ -409,7 +475,6 @@ ul a {
     flex-direction: column;
     position: relative;
     margin-top: 50px;
-    margin-left: 10%;
   }
   .nav-item {
     margin: 20px;
@@ -420,6 +485,7 @@ ul a {
   }
   .open .navBackground {
     width: 100%;
+    left: -20px;
   }
   .hamburger-container {
     border: 3px solid #626056;

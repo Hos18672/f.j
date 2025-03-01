@@ -1,4 +1,4 @@
-.About{
+.mainContainer{
     display: grid; 
     grid-template-rows: 80px 1fr;
     background-color: #FFFCF6;
@@ -7,6 +7,7 @@
     box-shadow: 3px 3px 3px 2px #D1D1D1;
     min-height: fit-content;
     height: 85vh;
+    flex-grow: 1;
     overflow: hidden;
  }
 
